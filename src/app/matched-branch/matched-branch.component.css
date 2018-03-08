@@ -1,0 +1,15 @@
+.branch-item {
+    width:100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,.1);;
+    
+}
+
+.branch-item:hover {
+    background-color: cadetblue;
+}
+
+.branch-info {
+    font-size: 10px;
+    font-style: italic;
+}
