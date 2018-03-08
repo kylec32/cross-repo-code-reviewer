@@ -1,0 +1,28 @@
+.container {
+    /* display: grid; */
+    grid-gap: 20px;
+    grid-template-columns: 100px 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: 
+        "header header"
+        "sidebar main"
+}
+
+.header {
+    grid-area: header;
+    
+    background-color: aqua;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: blueviolet;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.diff {
+    grid-area: main;
+    
+    background-color: chocolate;
+}

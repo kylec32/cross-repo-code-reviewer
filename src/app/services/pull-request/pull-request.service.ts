@@ -9,7 +9,7 @@ export class PullRequestService {
 
 
   getPullRequestDiff(organization:String, repository:String, prid:String):Observable<any> {
-    return this.http.get("https://api.bitbucket.org/2.0/repositories/syllogisticio/jenkinsagain/pullrequests/32/diff",
+    return this.http.get<string>("https://api.bitbucket.org/2.0/repositories/syllogisticio/jenkinsagain/pullrequests/32/diff",
                           {...this.getOptions(), 'responseType': 'text'});
   }
 

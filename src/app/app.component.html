@@ -1,13 +1,27 @@
 <!-- <app-login-control></app-login-control>
 <br/> -->
-<div class="ui-inputgroup">
-    <span class="ui-inputgroup-addon"></span>
-    <input type="text" pInputText placeholder="Filter" [(ngModel)]="filterText">         
+<div class="container">
+    <div class="header row">
+        <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"></span>
+            <input type="text" pInputText placeholder="Filter" [(ngModel)]="filterText">         
+        </div>
+        <p-button label="Filter Me" (click)="filter()"></p-button>
+        <button (click)="getRepos()">Run It</button>
+    </div>
+    <div class="row">
+    <div class="sidebar col-md-2">
+        <span *ngFor="let repository of foundRepositories | async">
+            <app-matched-branch [branchInfo]="repository" (clicked)="itemClicked()"></app-matched-branch>
+        </span>
+        
+    </div>
+    <div class="diff col-md-10">
+        <app-diff-viewer [diff]="currentDiff | async"></app-diff-viewer>
+    </div>
 </div>
-<p-button label="Filter Me" (click)="filter()"></p-button>
-<button (click)="getRepos()">Run It</button>
-<div *ngFor="let repository of foundRepositories | async">
-    {{repository.name}}
 </div>
-<app-diff-viewer [diff]="currentDiff | async"></app-diff-viewer>
+
+
+
 

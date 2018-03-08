@@ -12,7 +12,8 @@ import { AppComponent } from './app.component';
 import { LoginControlComponent } from './login-controls/login-control/login-control.component';
 
 import { SafeHTML } from './pipes/safe-html-pipe'
-import { DiffViewerComponent } from './diff-viewer/diff-viewer.component'
+import { DiffViewerComponent } from './diff-viewer/diff-viewer.component';
+import { MatchedBranchComponent } from './matched-branch/matched-branch.component'
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { DiffViewerComponent } from './diff-viewer/diff-viewer.component'
     AppComponent,
     LoginControlComponent,
     SafeHTML,
-    DiffViewerComponent
+    DiffViewerComponent,
+    MatchedBranchComponent
   ],
   imports: [
     BrowserModule,
